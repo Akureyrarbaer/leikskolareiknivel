@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<title>Reiknivél leikskólagjalda</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script src="calc.js"></script>
+<style>
+  .w3-theme {color:#fff !important; background-color:#005eb8 !important}
+  .w3-orange-theme {color:#000 !important; background-color:#F0A30A !important}
+  .w3-button:hover {color:#005eb8!important; background-color:#fff !important}
+  .w3-button.tablink {font-weight: bold;}
+  </style>
+<body>
+
+<div class="w3-container">
+  <h2>Reiknivél leikskólagjalda</h2>
+  <p>Veldu fyrst hjúskaparstöðu og viðeigandi tekjubil.</p>
+
+  <div class="w3-bar w3-theme w3-border">
+    <button class="w3-bar-item w3-button tablink w3-padding-16 w3-mobile w3-orange-theme" onclick="openTab(event,'Einn')">Ekki í sambúð</button>
+    <button class="w3-bar-item w3-button tablink w3-padding-16 w3-mobile w3-theme" onclick="openTab(event,'Par')">Í sambúð</button>
+  </div>
+  
+  <div id="Einn" class="w3-container w3-padding-16 Pstatus">
+    <h3>Veldu tekjubil á mánuði fyrir einstætt foreldri</h3>
+    <p>(Heildartekjur og fjármagnstekjur fyrir skatt, eins og á skattframtali)</p>
+          <form>
+        <label for="income_single">Tekjubil fyrir einstæða foreldra</label>
+        <select name="einhleypa" id="income_single">
+          <option value="999" selected>-</option>
+          <option value="0.75">0 - 431.000</option>
+          <option value="0.5">431.000 - 551.000</option>
+          <option value="0.25">551.000 - 671.000</option>
+          <option value="0.0">671.000 +</option>
+        </select>
+      </form>
+  </div>
+
+  <div id="Par" class="w3-container w3-padding-16 Pstatus" style="display:none">
+     <h3>Veldu tekjubil á mánuði fyrir par</h3>
+     <p>(Heildartekjur og fjármagnstekjur fyrir skatt, eins og á skattframtali)</p>
+          <form>
+        <label for="income_couple">Tekjubil fyrir par</label>
+        <select name="par" id="income_couple">
+          <option value="999" selected>-</option>
+          <option value="0.75">0 - 689.600</option>
+          <option value="0.5">689.600 - 881.600</option>
+          <option value="0.25">881.600 - 1.073.600</option>
+          <option value="0.0">1.073.600 +</option>
+        </select>
+      </form>
+  </div>
+</div>
+<div id="container" class="w3-container w3-padding-16 number">
+  <label for="quantity"><h3>Hversu mörg börn eru í leikskóla? </h3></label><input class="form-control w3-padding-16" type="number" name="quantity" id="quantity" min="1" max="4"/><br/>
+
+    <h3>Hversu marga tíma á dag?</h3>
+         <form>
+       <select name="hours" id="hours">
+         <option value="6" selected>6 eða færri</option>
+         <option value="6.25">6.25</option>
+         <option value="6.5">6.5</option>
+         <option value="6.75">6.75</option>
+         <option value="7">7</option>
+         <option value="7.25">7.25</option>
+         <option value="7.5">7.5</option>
+         <option value="7.75">7.75</option>
+         <option value="8">8</option>
+         <option value="8.25">8.25</option>
+         <option value="8.5">8.5</option>
+       </select>
+     </form>
+  </div>
+<div class="w3-container">
+  <input type="submit" class="w3-button w3-theme w3-margin w3-border w3-border-blue w3-round-large" id="myBtn" value="Reikna" onclick="calculate()">
+  			<!-- Script lætur vera að hægt er að ýta á enter í stað þess að ýta á takkann. -->
+        <script>
+          document.getElementById("hours")
+              .addEventListener("keyup", function(event) {
+              event.preventDefault();
+              if (event.keyCode === 13) {
+                  document.getElementById("myBtn").click();
+              }
+          });
+      </script>
+</div>
+<input type="button"  class="w3-button w3-orange-theme w3-margin w3-round-large w3-border w3-border-orange" value="Endursetja formið" onClick="window.location.reload(true)">
+<div id="result_div" class="w3-container w3-padding-16 number"></div>
+<div id="parentstatus_div" class="w3-container w3-padding-16 number"></div>
+<script>
+function openTab(evt, tabName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("Pstatus");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace("w3-orange-theme","w3-theme");
+  }
+  document.getElementById(tabName).style.display = "block";
+  evt.target.className += " w3-orange-theme";
+}
+
+</script>
+
+</body>
+</html>
