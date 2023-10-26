@@ -10,7 +10,7 @@
 <style>
   .w3-theme {color:#fff !important; background-color:#005eb8 !important}
   .w3-orange-theme {color:#000 !important; background-color:#F0A30A !important}
-  
+
   h2 {
     color: #005eb8;
     font-weight: bold;
@@ -35,14 +35,15 @@
 <body>
 
 <div class="w3-container">
-  <h2>Reiknivél leikskólagjalda</h2>
+  <a href="https://www.akureyri.is/" title="Hlekkur í heimasíðu Akureyrarbæjar"><img src="Akureyri.png" alt="Merki Akureyrarbæjar"></a>
+  <h2>Reiknivél leikskólagjalda hjá Akureyrarbæ</h2>
   <p>Veldu fyrst hjúskaparstöðu og viðeigandi tekjubil.</p>
 
   <div class="w3-bar w3-theme w3-border">
     <button class="w3-bar-item w3-button tablink w3-padding-16 w3-mobile w3-orange-theme" onclick="openTab(event,'Einn')">Ekki í sambúð</button>
     <button class="w3-bar-item w3-button tablink w3-padding-16 w3-mobile w3-theme" onclick="openTab(event,'Par')">Í sambúð</button>
   </div>
-  
+</div>
   <div id="Einn" class="w3-container w3-padding-16 Pstatus">
     <h3>Veldu tekjubil á mánuði fyrir einstætt foreldri</h3>
     <p>(Heildartekjur og fjármagnstekjur fyrir skatt, eins og á skattframtali)</p>
@@ -72,10 +73,17 @@
         </select>
       </form>
   </div>
-</div>
-<div id="container" class="w3-container w3-padding-16 number">
-  <label for="quantity"><h3>Hversu mörg börn eru í leikskóla? </h3></label><input class="form-control w3-padding-16" type="number" name="quantity" id="quantity" min="1" max="4"/><br/>
 
+<div id="container" class="w3-container w3-padding-16 number">
+  <h3>Hversu mörg börn eru í leikskóla? </h3>
+      <form>
+        <select name="quantity" id="quantity">
+          <option value="1" selected>1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+        </select>
+      </form>
     <h3>Hversu marga tíma á dag?</h3>
          <form>
        <select name="hours" id="hours">
