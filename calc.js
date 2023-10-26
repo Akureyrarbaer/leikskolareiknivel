@@ -9,9 +9,9 @@ const hour_cost_akb = 36500 //kostnaður bæjarins fyrir hvern klukkutíma á hv
 
 
 // Lýsa yfir global breytum
-var quantity
+var quantity //fjöldi barna
 var extra_quantity //börn umfram eitt - notað í útreikningi
-var hours
+var hours //fjöldi tíma 
 var hours_cost_extra //notað í útreikningi
 var hours_cost_extra_children //notað í útreikningi
 var time_cost_akb_first //notað í útreikningi
@@ -31,7 +31,7 @@ var discount //notað í útreikningi
 var discount_toprint //notað til að prenta út á skjá
 var income_toprint //notað til að prenta út á skjá
 var time_cost_toprint //notað til að prenta út á skjá
-var discount_in_kronur // Afsláttur í krónum til að prenta á skjá
+var discount_in_kronur //Afsláttur í krónum til að prenta á skjá
 
 
 var time_cost_test
@@ -173,6 +173,6 @@ function calculate(){
         parentstatus_toprint = "foreldra í sambúð";
 
     }
-    result_div.innerHTML = "<h2>Heildarkostnaður foreldra: "+result_parent+" kr.<br/>Heildarkostnaður Akureyrarbæjar: "+result_akb+" kr.</h2><p>Að vera með "+quantity+" "+children+" í "+hours+" klukkutíma á dag kostar "+result_parent+" kr. á mánuði fyrir "+parentstatus_toprint+" með tekjur á bilinu: "+income_toprint+" kr. á mánuði.</p><p><strong>Sundurliðun: </strong></p><p>Miðað við þínar forsendur eru áætluð leikskólagjöld eftirfarandi: </p><p>Skólagjald: "+time_cost+" kr.</p><p>Fæðisgjald: "+food_cost+" kr.</p><p>Afsláttur af skólagjaldi: "+discount_toprint+" prósent</p><p><strong>Samtals: "+result_parent+" kr.</strong></p>"
-    //parentstatus_div.innerHTML = "<h4>Prófun: time_cost_akb_first "+time_cost_akb_first+" time_cost_akb_whole " +time_cost_akb_whole+" time_cost_akb_total " +time_cost_akb_total+"</h4>"
+    result_div.innerHTML = "<h2>Mánaðargjald: "+result_parent+"</h2><p>Að vera með "+quantity+" "+children+" í "+hours+" klukkutíma á dag kostar "+result_parent+" kr. á mánuði fyrir "+parentstatus_toprint+" með tekjur á bilinu: "+income_toprint+" kr. á mánuði.</p><p><strong>Sundurliðun: </strong></p><p>Miðað við þínar forsendur eru áætluð leikskólagjöld eftirfarandi: </p><p>Skólagjald: "+time_cost+" kr.</p><p><strong>Fæðisgjald:</strong> "+food_cost+" kr.</p><strong><p>Afsláttur af skólagjaldi:</strong> "+discount_toprint+" prósent</p><p><strong>Samtals: "+result_parent+" kr.</strong></p><p>kr.Kostnaðarhlutdeild Akureyrarbæjar: "+result_akb+" kr.</p>"
+   
 }
