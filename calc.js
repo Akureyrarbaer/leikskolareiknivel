@@ -5,7 +5,7 @@ const food_small = 8606 //kostnaður fyrir hálft fæði (6 tíma dvöl eða min
 const food_big = 11387 //kostnaður fyrir fullt fæði (6 tíma dvöl eða meira)
 const hour_cost_big = 4125 //leikskólagjald á hvert kortér fyrir fyrsta barn
 const hour_cost_mega = 6188 //leikskólagjald á hvert kortér ef börnin eru fleiri en 1
-const hour_cost_akb = 36500 //kostnaður bæjarins fyrir hvern klukkutíma á hvert barn
+const hour_cost_akb = 41117 //kostnaður bæjarins fyrir hvern klukkutíma á hvert barn
 
 
 // Lýsa yfir global breytum
