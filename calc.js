@@ -173,6 +173,6 @@ function calculate(){
         parentstatus_toprint = "foreldra í sambúð";
 
     }
-    result_div.innerHTML = "<h3>Mánaðargjald: "+result_parent+" kr.</h3><p>Að vera með "+quantity+" "+children+" í "+hours+" klukkutíma á dag kostar "+result_parent+" kr. á mánuði fyrir "+parentstatus_toprint+" með tekjur á bilinu: "+income_toprint+" kr. á mánuði.</p><p><strong>Sundurliðun: </strong></p><p>Miðað við þínar forsendur eru áætluð leikskólagjöld eftirfarandi: </p><p><strong>Skólagjald:</strong> "+time_cost+" kr.</p><p><strong>Fæðisgjald:</strong> "+food_cost+" kr.</p><strong><p>Afsláttur af skólagjaldi:</strong> "+discount_toprint+" prósent</p><p><strong>Samtals: "+result_parent+" kr.</strong></p><p>Kostnaðarhlutdeild Akureyrarbæjar: "+result_akb+" kr.</p>"
+    result_div.innerHTML = "<h3>Mánaðargjald: "+result_parent+" kr.</h3><p>Að vera með "+quantity+" "+children+" í "+hours+" klukkutíma á dag kostar "+result_parent+" kr. á mánuði fyrir "+parentstatus_toprint+" með tekjur á bilinu: "+income_toprint+" kr. á mánuði.</p><p><strong>Sundurliðun: </strong></p><p>Miðað við þínar forsendur eru áætluð leikskólagjöld eftirfarandi: </p><p><strong>Skólagjald:</strong> "+time_cost+" kr.</p><p><strong>Fæðisgjald:</strong> "+food_cost+" kr.</p><strong><p>Afsláttur af skólagjaldi vegna tekna:</strong> "+discount_toprint+" prósent</p><p><strong>Samtals: "+result_parent+" kr.</strong></p><p>Kostnaðarhlutdeild Akureyrarbæjar: "+result_akb+" kr.</p>"
    
 }
