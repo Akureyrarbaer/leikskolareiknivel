@@ -1,10 +1,10 @@
 // Lýsa yfir föstum
-const standard_cost1 = 16500 //leikskólagjald fyrir fyrsta barn
-const standard_cost2 = 24750 //leikskólagjald fyrir auka barn/börn (aldrei meira en 1 og 1/2 fullt gjald)
+const standard_cost1 = 15180 //leikskólagjald fyrir fyrsta barn
+const standard_cost2 = 22770 //leikskólagjald fyrir auka barn/börn (aldrei meira en 1 og 1/2 fullt gjald)
 const food_small = 8606 //kostnaður fyrir hálft fæði (6 tíma dvöl eða minna)
 const food_big = 11387 //kostnaður fyrir fullt fæði (6 tíma dvöl eða meira)
-const hour_cost_big = 4125 //leikskólagjald á hvert kortér fyrir fyrsta barn
-const hour_cost_mega = 6188 //leikskólagjald á hvert kortér ef börnin eru fleiri en 1
+const hour_cost_big = 3795 //leikskólagjald á hvert kortér fyrir fyrsta barn
+const hour_cost_mega = 5693 //leikskólagjald á hvert kortér ef börnin eru fleiri en 1
 const hour_cost_akb = 41117 //kostnaður bæjarins fyrir hvern klukkutíma á hvert barn
 
 
