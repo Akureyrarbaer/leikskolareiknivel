@@ -80,18 +80,18 @@ function calculate(){
             parentstatus = "Par";
             discount = income_couple;
             if (income_couple === "0.75"){
-                income_toprint = "0 - 689.600";
+                income_toprint = "0 - 646.500";
                 discount_toprint = "75%";
             }else if( income_couple=== "0.5"){
-                income_toprint = "689.600 - 881.600";
+                income_toprint = "646.500 - 826.500";
                 discount_toprint = "50%";
             }
             else if( income_couple === "0.25"){
-                income_toprint = "881.600 - 1.073.600";
+                income_toprint = "826.500 - 1.006.500";
                 discount_toprint = "25%";
             }
             else if( income_couple === "0.0"){
-                income_toprint = "1.073.600 +";
+                income_toprint = "1.006.500 +";
                 discount_toprint = "0%";
             }
         }
