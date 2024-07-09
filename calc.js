@@ -58,19 +58,19 @@ function calculate(){
         if (income_single !== "999"){
                 parentstatus = "Einn";
                 discount = income_single;
-        if (income_single === "0.75"){
-                    income_toprint = "0 - 431.000";
-                    discount_toprint = "75%";
+        if (income_single === "0.625"){
+                    income_toprint = "0 - 5.482.319";
+                    discount_toprint = "62.5%";
             }else if( income_single === "0.5"){
-                    income_toprint = "431.000 - 551.000";
+                    income_toprint = "5.482.320 - 7.008.719";
                     discount_toprint = "50%";
                 }
                 else if( income_single === "0.25"){
-                    income_toprint = "551.000 - 671.000";
+                    income_toprint = "7.008.720 - 8.535.119";
                     discount_toprint = "25%";
                 }
                     else if( income_single === "0.0"){
-                    income_toprint = "671.000 +";
+                    income_toprint = "8.535.120 +";
                     discount_toprint = "0%";
                 }
             }
@@ -79,19 +79,19 @@ function calculate(){
         else if (income_couple !== "999"){
             parentstatus = "Par";
             discount = income_couple;
-            if (income_couple === "0.75"){
-                income_toprint = "0 - 646.500";
-                discount_toprint = "75%";
+            if (income_couple === "0.625"){
+                income_toprint = "0 - 8.223.479";
+                discount_toprint = "62.5%";
             }else if( income_couple=== "0.5"){
-                income_toprint = "646.500 - 826.500";
+                income_toprint = "8.223.480 - 10.513.079";
                 discount_toprint = "50%";
             }
             else if( income_couple === "0.25"){
-                income_toprint = "826.500 - 1.006.500";
+                income_toprint = "10.513.079 - 12.802.679";
                 discount_toprint = "25%";
             }
             else if( income_couple === "0.0"){
-                income_toprint = "1.006.500 +";
+                income_toprint = "12.802.680 +";
                 discount_toprint = "0%";
             }
         }
@@ -173,6 +173,5 @@ function calculate(){
         parentstatus_toprint = "foreldra í sambúð";
 
     }
-    result_div.innerHTML = "<h3>Mánaðargjald: "+result_parent+" kr.</h3><p><strong>Vinsamlegast athugið að reiknivélin er eingöngu til viðmiðunar.</strong> Fleiri atriði geta komið fram á reikningi, svo sem bleyjusjóður og skráningardagar. Hægt er að skoða sundurliðaðan reikning í <a href=\"https://thjonustugatt2.akureyri.is/\" target=\"_blank\">þjónustugátt Akureyrarbæjar</a>.</p> <p>Að vera með "+quantity+" "+children+" í "+hours+" klukkutíma á dag kostar "+result_parent+" kr. á mánuði fyrir "+parentstatus_toprint+" með tekjur á bilinu: "+income_toprint+" kr. á mánuði.</p><p><strong>Sundurliðun: </strong></p><p>Miðað við þínar forsendur eru áætluð leikskólagjöld eftirfarandi: </p><p><strong>Skólagjald:</strong> "+time_cost+" kr.</p><p><strong>Fæðisgjald:</strong> "+food_cost+" kr.</p><strong><p>Afsláttur af skólagjaldi vegna tekna:</strong> "+discount_toprint+" prósent</p><p><strong>Samtals: "+result_parent+" kr.</strong></p><p>Kostnaðarhlutdeild Akureyrarbæjar: "+result_akb+" kr.</p>"
-   
+    result_div.innerHTML = "<h3>Mánaðargjald: "+result_parent+" kr.</h3><p><strong>Vinsamlegast athugið að reiknivélin er eingöngu til viðmiðunar.</strong> Fleiri atriði geta komið fram á reikningi, svo sem bleyjusjóður og skráningardagar. Hægt er að skoða sundurliðaðan reikning í <a href=\"https://thjonustugatt2.akureyri.is/\" target=\"_blank\">þjónustugátt Akureyrarbæjar</a>.</p> <p>Að vera með "+quantity+" "+children+" í "+hours+" klukkutíma á dag kostar "+result_parent+" kr. á mánuði fyrir "+parentstatus_toprint+" með árstekjur á bilinu: "+income_toprint+" kr. á árinu 2023.</p><p><strong>Sundurliðun: </strong></p><p>Miðað við þínar forsendur eru áætluð leikskólagjöld eftirfarandi: </p><p><strong>Skólagjald:</strong> "+time_cost+" kr.</p><p><strong>Fæðisgjald:</strong> "+food_cost+" kr.</p><strong><p>Afsláttur af skólagjaldi vegna tekna:</strong> "+discount_toprint+" prósent</p><p><strong>Samtals: "+result_parent+" kr.</strong></p><p>Kostnaðarhlutdeild Akureyrarbæjar: "+result_akb+" kr.</p>"
 }
