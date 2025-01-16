@@ -1,11 +1,11 @@
 // Lýsa yfir föstum
-const standard_cost1 = 15180 //leikskólagjald fyrir fyrsta barn
-const standard_cost2 = 22770 //leikskólagjald fyrir auka barn/börn (aldrei meira en 1 og 1/2 fullt gjald)
-const food_small = 8606 //kostnaður fyrir hálft fæði (6 tíma dvöl eða minna)
-const food_big = 11387 //kostnaður fyrir fullt fæði (6 tíma dvöl eða meira)
-const hour_cost_big = 3795 //leikskólagjald á hvert kortér fyrir fyrsta barn
-const hour_cost_mega = 5693 //leikskólagjald á hvert kortér ef börnin eru fleiri en 1
-const hour_cost_akb = 41117 //kostnaður bæjarins fyrir hvern klukkutíma á hvert barn
+const standard_cost1 = 15426 //leikskólagjald fyrir fyrsta barn
+const standard_cost2 = 23139 //leikskólagjald fyrir auka barn/börn (aldrei meira en 1 og 1/2 fullt gjald)
+const food_small = 8457 //kostnaður fyrir hálft fæði (6 tíma dvöl eða minna)
+const food_big = 11190 //kostnaður fyrir fullt fæði (6 tíma dvöl eða meira)
+const hour_cost_big = 3857 //leikskólagjald á hvert kortér fyrir fyrsta barn
+const hour_cost_mega = 5785 //leikskólagjald á hvert kortér ef börnin eru fleiri en 1
+const hour_cost_akb = 42556 //kostnaður bæjarins fyrir hvern klukkutíma á hvert barn
 
 
 // Lýsa yfir global breytum
@@ -173,5 +173,5 @@ function calculate(){
         parentstatus_toprint = "foreldra í sambúð";
 
     }
-    result_div.innerHTML = "<h3>Mánaðargjald: "+result_parent+" kr.</h3><p><strong>Vinsamlegast athugið að reiknivélin er eingöngu til viðmiðunar.</strong> Fleiri atriði geta komið fram á reikningi, svo sem bleyjusjóður og skráningardagar. Hægt er að skoða sundurliðaðan reikning í <a href=\"https://thjonustugatt2.akureyri.is/\" target=\"_blank\">þjónustugátt Akureyrarbæjar</a>.</p> <p>Að vera með "+quantity+" "+children+" í "+hours+" klukkutíma á dag kostar "+result_parent+" kr. á mánuði fyrir "+parentstatus_toprint+" með árstekjur á bilinu: "+income_toprint+" kr. á árinu 2023.</p><p><strong>Sundurliðun: </strong></p><p>Miðað við þínar forsendur eru áætluð leikskólagjöld eftirfarandi: </p><p><strong>Skólagjald:</strong> "+time_cost+" kr.</p><p><strong>Fæðisgjald:</strong> "+food_cost+" kr.</p><strong><p>Afsláttur af skólagjaldi vegna tekna:</strong> "+discount_toprint+" prósent</p><p><strong>Samtals: "+result_parent+" kr.</strong></p><p>Kostnaðarhlutdeild Akureyrarbæjar: "+result_akb+" kr.</p>"
+    result_div.innerHTML = "<h3>Mánaðargjald: "+result_parent+" kr.</h3><p><strong>Vinsamlegast athugið að reiknivélin er eingöngu til viðmiðunar.</strong> Fleiri atriði geta komið fram á reikningi, svo sem bleyjusjóður og skráningardagar. Hægt er að skoða sundurliðaðan reikning í <a href=\"https://thjonustugatt2.akureyri.is/\" target=\"_blank\">þjónustugátt Akureyrarbæjar</a>.</p> <p>Að vera með "+quantity+" "+children+" í "+hours+" klukkutíma á dag kostar "+result_parent+" kr. á mánuði fyrir "+parentstatus_toprint+" með árstekjur á bilinu: "+income_toprint+" kr. á árinu 2024.</p><p><strong>Sundurliðun: </strong></p><p>Miðað við þínar forsendur eru áætluð leikskólagjöld eftirfarandi: </p><p><strong>Skólagjald:</strong> "+time_cost+" kr.</p><p><strong>Fæðisgjald:</strong> "+food_cost+" kr.</p><strong><p>Afsláttur af skólagjaldi vegna tekna:</strong> "+discount_toprint+" prósent</p><p><strong>Samtals: "+result_parent+" kr.</strong></p><p>Kostnaðarhlutdeild Akureyrarbæjar: "+result_akb+" kr.</p>"
 }

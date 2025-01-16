@@ -8,19 +8,21 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <script src="calc.js"></script>
 <style>
-  .w3-theme {color:#fff !important; background-color:#005eb8 !important}
-  .w3-orange-theme {color:#000 !important; background-color:#F0A30A !important}
-
+  .w3-theme {color:#fff !important; background-color:#005eb8 !important; hover:#E5F1FB }
+  .w3-blue-theme {color:#000 !important; background-color:#a3cdf0 !important; hover:#E5F1FB }
+  .w3-button:hover{color:#000!important; background-color:#E5F1FB !important}
+  .w3-border-0{border:0!important}.w3-border{border:1px solid #005eb8 !important}
+  .yellow-button{color:#000!important; background-color:#FFF0C6 !important; hover:#E5F1FB}
   h2 {
     color: #005eb8;
     font-weight: bold;
   }
   
-  @media not all and (hover: hover) {
-      .w3-button:hover {color:#000 !important; background-color:#F0A30A !important}
-  }
+ @media not all and (hover: hover) {
+  .w3-button.hover {color:#000 !important; background-color:#E5F1FB  }
+}
 
-  .w3-button.tablink {font-weight: bold;}
+  .w3-button.tablink {font-weight: bold; }
   img {
     float: right;
     max-height: 150px;
@@ -38,20 +40,20 @@
   <a href="https://www.akureyri.is/" title="Hlekkur í heimasíðu Akureyrarbæjar"><img src="Akureyri.png" alt="Merki Akureyrarbæjar"></a>
   <h2>Reiknivél leikskólagjalda hjá Akureyrarbæ</h2>
   <p class="w3-large">
-    <a href="https://www.akureyri.is/is/thjonusta/menntun/leikskolar/spurt-og-svarad-um-nyja-gjaldskra-leikskola" class="w3-button w3-orange-theme w3-margin w3-round-large w3-border w3-border-orange">Algengar spurningar</a>
+    <a href="https://www.akureyri.is/is/thjonusta/menntun/leikskolar/spurt-og-svarad-um-nyja-gjaldskra-leikskola" class="w3-button w3-blue-theme w3-margin w3-round-large w3-border w3-border-blue">Algengar spurningar</a>
   </p>
   <p>Veldu fyrst hjúskaparstöðu og viðeigandi tekjubil.</p>
 
   <div class="w3-bar w3-theme w3-border">
-    <button class="w3-bar-item w3-button tablink w3-padding-16 w3-mobile w3-orange-theme" onclick="openTab(event,'Einn')">Ekki í sambúð</button>
-    <button class="w3-bar-item w3-button tablink w3-padding-16 w3-mobile w3-theme" onclick="openTab(event,'Par')">Í sambúð</button>
+    <button class="w3-bar-item w3-button tablink w3-padding-16 w3-mobile w3-blue-theme w3-border-blue" onclick="openTab(event,'Einn')">Ekki í sambúð</button>
+    <button class="w3-bar-item w3-button tablink w3-padding-16 w3-mobile w3-theme w3-border-blue" onclick="openTab(event,'Par')">Í sambúð</button>
   </div>
 </div>
   <div id="Einn" class="w3-container w3-padding-16 Pstatus">
     <h3>Veldu tekjubil á ári fyrir einstætt foreldri</h3>
     <p>(Heildartekjur og fjármagnstekjur fyrir skatt, eins og á skattframtali)</p>
           <form>
-        <label for="income_single">Tekjubil fyrir árið 2023 fyrir einstæða foreldra</label>
+        <label for="income_single">Tekjubil fyrir árið 2025 fyrir einstæða foreldra</label>
         <select name="einhleypa" id="income_single">
           <option value="999" selected>-</option>
           <option value="0.625">0 - 5.482.319</option>
@@ -66,7 +68,7 @@
      <h3>Veldu tekjubil á ári fyrir par</h3>
      <p>(Heildartekjur og fjármagnstekjur fyrir skatt, eins og á skattframtali)</p>
           <form>
-        <label for="income_couple">Tekjubil fyrir árið 2023 fyrir par</label>
+        <label for="income_couple">Tekjubil fyrir árið 2025 fyrir par</label>
         <select name="par" id="income_couple">
           <option value="999" selected>-</option>
           <option value="0.625">0 - 8.223.479</option>
@@ -117,7 +119,7 @@
           });
       </script>
 </div>
-<input type="button"  class="w3-button w3-orange-theme w3-margin w3-round-large w3-border w3-border-orange" value="Endursetja formið" onClick="window.location.reload(true)">
+<input type="button"  class="w3-button w3-blue-theme w3-margin w3-round-large w3-border w3-border-blue" value="Endursetja formið" onClick="window.location.reload(true)">
 <div id="result_div" class="w3-container w3-padding-16 number"></div>
 <div id="parentstatus_div" class="w3-container w3-padding-16 number"></div>
 <script>
@@ -129,10 +131,10 @@ function openTab(evt, tabName) {
   }
   tablinks = document.getElementsByClassName("tablink");
   for (i = 0; i < x.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace("w3-orange-theme","w3-theme");
+    tablinks[i].className = tablinks[i].className.replace("w3-blue-theme","w3-theme");
   }
   document.getElementById(tabName).style.display = "block";
-  evt.target.className += " w3-orange-theme";
+  evt.target.className += " w3-blue-theme";
 }
 
 </script>
