@@ -59,18 +59,18 @@ function calculate(){
                 parentstatus = "Einn";
                 discount = income_single;
         if (income_single === "0.625"){
-                    income_toprint = "0 - 5.482.319";
+                    income_toprint = "0 - 5.756.435";
                     discount_toprint = "62.5%";
             }else if( income_single === "0.5"){
-                    income_toprint = "5.482.320 - 7.008.719";
+                    income_toprint = "5.756.436 - 7.359.155";
                     discount_toprint = "50%";
                 }
                 else if( income_single === "0.25"){
-                    income_toprint = "7.008.720 - 8.535.119";
+                    income_toprint = "7.359.156 - 8.961.875";
                     discount_toprint = "25%";
                 }
                     else if( income_single === "0.0"){
-                    income_toprint = "8.535.120 +";
+                    income_toprint = "8.961.876 +";
                     discount_toprint = "0%";
                 }
             }
@@ -80,18 +80,18 @@ function calculate(){
             parentstatus = "Par";
             discount = income_couple;
             if (income_couple === "0.625"){
-                income_toprint = "0 - 8.223.479";
+                income_toprint = "0 - 8.634.653";
                 discount_toprint = "62.5%";
             }else if( income_couple=== "0.5"){
-                income_toprint = "8.223.480 - 10.513.079";
+                income_toprint = "8.634.654 - 11.038.733";
                 discount_toprint = "50%";
             }
             else if( income_couple === "0.25"){
-                income_toprint = "10.513.079 - 12.802.679";
+                income_toprint = "11.038.734 - 13.442.813";
                 discount_toprint = "25%";
             }
             else if( income_couple === "0.0"){
-                income_toprint = "12.802.680 +";
+                income_toprint = "13.442.814 +";
                 discount_toprint = "0%";
             }
         }
