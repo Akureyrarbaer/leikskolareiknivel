@@ -12,7 +12,7 @@
   .w3-blue-theme {color:#000 !important; background-color:#a3cdf0 !important; hover:#E5F1FB }
   .w3-button:hover{color:#000!important; background-color:#E5F1FB !important}
   .w3-border-0{border:0!important}.w3-border{border:1px solid #005eb8 !important}
-  .yellow-button{color:#000!important; background-color:#FFF0C6 !important; hover:#E5F1FB}
+  .yellow-button{color:#000!important; background-color:#ffc72c !important; hover:#E5F1FB}
   h2 {
     color: #005eb8;
     font-weight: bold;
@@ -49,79 +49,163 @@
     <button class="w3-bar-item w3-button tablink w3-padding-16 w3-mobile w3-theme w3-border-blue" onclick="openTab(event,'Par')">Í sambúð</button>
   </div>
 </div>
-  <div id="Einn" class="w3-container w3-padding-16 Pstatus">
-    <h3>Veldu tekjubil á ári fyrir einstætt foreldri</h3>
-    <p>(Heildartekjur og fjármagnstekjur fyrir skatt, eins og á skattframtali)</p>
-          <form>
-        <label for="income_single">Tekjubil fyrir árið 2026 fyrir einstæða foreldra</label>
-        <select name="einhleypa" id="income_single">
-          <option value="999" selected>-</option>
-          <option value="0.625">0 - 5.756.435</option>
-          <option value="0.5">5.756.436 - 7.359.155</option>
-          <option value="0.25">7.359.156 - 8.961.875</option>
-          <option value="0.0">8.961.876 +</option>
-        </select>
-      </form>
-  </div>
+<div class="w3-container w3-padding-16">
+    <div id="Einn" class="w3-container w3-padding-16 Pstatus">
+      <h3>Veldu tekjubil á ári fyrir einstætt foreldri</h3>
+      <p>(Heildartekjur og fjármagnstekjur fyrir skatt, eins og á skattframtali)</p>
+            <form>
+          <label for="income_single">Tekjubil fyrir árið 2026 fyrir einstæða foreldra</label>
+          <select name="einhleypa" id="income_single">
+            <option value="999" selected>-</option>
+            <option value="0.625">0 - 5.756.435</option>
+            <option value="0.5">5.756.436 - 7.359.155</option>
+            <option value="0.25">7.359.156 - 8.961.875</option>
+            <option value="0.0">8.961.876 +</option>
+          </select>
+        </form>
+    </div>
 
-  <div id="Par" class="w3-container w3-padding-16 Pstatus" style="display:none">
-     <h3>Veldu tekjubil á ári fyrir par</h3>
-     <p>(Heildartekjur og fjármagnstekjur fyrir skatt, eins og á skattframtali)</p>
-          <form>
-        <label for="income_couple">Tekjubil fyrir árið 2026 fyrir par</label>
-        <select name="par" id="income_couple">
-          <option value="999" selected>-</option>
-          <option value="0.625">0 - 8.634.653</option>
-          <option value="0.5">8.634.654 - 11.038.733</option>
-          <option value="0.25">11.038.734 - 13.442.813</option>
-          <option value="0.0">13.442.814 +</option>
-        </select>
-      </form>
-  </div>
+    <div id="Par" class="w3-container w3-padding-16 Pstatus" style="display:none">
+      <h3>Veldu tekjubil á ári fyrir par</h3>
+      <p>(Heildartekjur og fjármagnstekjur fyrir skatt, eins og á skattframtali)</p>
+            <form>
+          <label for="income_couple">Tekjubil fyrir árið 2026 fyrir par</label>
+          <select name="par" id="income_couple">
+            <option value="999" selected>-</option>
+            <option value="0.625">0 - 8.634.653</option>
+            <option value="0.5">8.634.654 - 11.038.733</option>
+            <option value="0.25">11.038.734 - 13.442.813</option>
+            <option value="0.0">13.442.814 +</option>
+          </select>
+        </form>
+    </div>
 
-<div id="container" class="w3-container w3-padding-16 number">
-  <h3>Hversu mörg börn eru í leikskóla? </h3>
-      <form>
-        <select name="quantity" id="quantity">
-          <option value="1" selected>1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-        </select>
-      </form>
-    <h3>Hversu marga tíma á dag?</h3>
-         <form>
-       <select name="hours" id="hours">
-         <option value="6" selected>6 eða færri</option>
-         <option value="6.25">6.25</option>
-         <option value="6.5">6.5</option>
-         <option value="6.75">6.75</option>
-         <option value="7">7</option>
-         <option value="7.25">7.25</option>
-         <option value="7.5">7.5</option>
-         <option value="7.75">7.75</option>
-         <option value="8">8</option>
-         <option value="8.25">8.25</option>
-         <option value="8.5">8.5</option>
-       </select>
-     </form>
-  </div>
-<div class="w3-container">
-  <input type="submit" class="w3-button w3-theme w3-margin w3-border w3-border-blue w3-round-large" id="myBtn" value="Reikna" onclick="calculate()">
-  			<!-- Script lætur vera að hægt er að ýta á enter í stað þess að ýta á takkann. -->
-        <script>
-          document.getElementById("hours")
-              .addEventListener("keyup", function(event) {
-              event.preventDefault();
-              if (event.keyCode === 13) {
-                  document.getElementById("myBtn").click();
-              }
-          });
-      </script>
+    <div id="container" class="w3-container w3-padding-16 number">
+      <h3>Hversu mörg börn eru í leikskóla? </h3>
+          <form>
+            <select name="quantity" id="quantity">
+              <option value="1" selected>1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+            </select>
+          </form>
+        <h3>Hversu marga tíma á dag?</h3>
+            <form>
+          <select name="hours" id="hours">
+            <option value="6" selected>6 eða færri</option>
+            <option value="6.25">6.25</option>
+            <option value="6.5">6.5</option>
+            <option value="6.75">6.75</option>
+            <option value="7">7</option>
+            <option value="7.25">7.25</option>
+            <option value="7.5">7.5</option>
+            <option value="7.75">7.75</option>
+            <option value="8">8</option>
+            <option value="8.25">8.25</option>
+            <option value="8.5">8.5</option>
+          </select>
+        </form>
+      </div>
+    <div class="w3-container">
+      <input type="submit" class="w3-button w3-theme w3-margin w3-border w3-border-blue w3-round-large" id="myBtn" value="Reikna" onclick="calculate()">
+            <!-- Script lætur vera að hægt er að ýta á enter í stað þess að ýta á takkann. -->
+            <script>
+              document.getElementById("hours")
+                  .addEventListener("keyup", function(event) {
+                  event.preventDefault();
+                  if (event.keyCode === 13) {
+                      document.getElementById("myBtn").click();
+                  }
+              });
+          </script>
+    </div>
+    <input type="button"  class="w3-button w3-blue-theme w3-margin w3-round-large w3-border w3-border-blue" value="Endursetja formið" onClick="window.location.reload(true)">
+    <div id="result_div" class="w3-container w3-padding-16 number"></div>
+    <div id="parentstatus_div" class="w3-container w3-padding-16 number"></div>
 </div>
-<input type="button"  class="w3-button w3-blue-theme w3-margin w3-round-large w3-border w3-border-blue" value="Endursetja formið" onClick="window.location.reload(true)">
-<div id="result_div" class="w3-container w3-padding-16 number"></div>
-<div id="parentstatus_div" class="w3-container w3-padding-16 number"></div>
+<div class="w3-container w3-padding-16">
+  <h3>Tekjutöflur</h3>
+  <div class="w3-container w3-padding-16">
+    <table class="w3-table w3-bordered w3-striped w3-quarter">
+      <tr>
+        <th>Einstaklingur</th>
+      </tr>
+      <tr>
+        <th>&nbsp;</th>
+        <th>Á ári</th>
+        <th>&nbsp;</th>
+      </tr>
+      <tr>
+        <th>Afsláttur</th>
+        <th>Neðri mörk</th>
+        <th>Efri mörk</th>
+      </tr>
+      <tr>
+        <td>62,5%</td>
+        <td>0</td>
+        <td>5.756.435</td>
+      </tr>
+      <tr>
+        <td>50%</td>
+        <td>5.756.436</td>
+        <td>7.359.155</td>
+      </tr>
+      <tr>
+        <td>
+          25%
+        </td>
+        <td>7.359.156</td>
+        <td>8.961.875</td>
+      </tr>
+      <tr>
+        <td>0%</td>
+        <td>8.961.876</td>
+        <td>&nbsp;</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="w3-container w3-padding-16">
+    <table class="w3-table w3-bordered w3-striped w3-quarter">
+      <tr>
+        <th>Hjón / Sambúðarfólk</th>
+      </tr>
+      <tr>
+        <th>&nbsp;</th>
+        <th>Á ári</th>
+        <th>&nbsp;</th>
+      </tr>
+      <tr>
+        <th>Afsláttur</th>
+        <th>Neðri mörk</th>
+        <th>Efri mörk</th>
+      </tr>
+      <tr>
+        <td>62,5%</td>
+        <td>0</td>
+        <td>8.934.653</td>
+      </tr>
+      <tr>
+        <td>50%</td>
+        <td>8.634.654</td>
+        <td>11.038.733</td>
+      </tr>
+      <tr>
+        <td>
+          25%
+        </td>
+        <td>11.038.734</td>
+        <td>13.442.813</td>
+      </tr>
+      <tr>
+        <td>0%</td>
+        <td>13.442.814</td>
+        <td>&nbsp;</td>
+      </tr>
+    </table>
+  </div>
+</div>
 <script>
 function openTab(evt, tabName) {
   var i, x, tablinks;
